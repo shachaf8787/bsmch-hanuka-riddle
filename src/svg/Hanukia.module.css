@@ -1,0 +1,14 @@
+.candles-container {
+  display: flex;
+  margin-inline: auto;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.candle-holder{
+  background-image: url(../assests/SingleCandle.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 50px;
+}

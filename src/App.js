@@ -1,4 +1,5 @@
 import "./App.css";
+import Hanukia from "./svg/Hanukia";
 
 function App() {
   return (
@@ -13,10 +14,17 @@ function App() {
         <h2 className="subTitle">חידת חנוכה</h2>
       </header>
       <figure>
-        
+        <Hanukia />
       </figure>
       <main>
-        <p className="text">The universe is big. It’s vast and complicated and ridiculous. And sometimes, very rarely, impossible things just happen and we call them miracles</p>
+        <p className="text">
+          The universe is big. It’s vast and complicated and ridiculous. And
+          sometimes, very rarely, impossible things just happen and we call them
+          miracles
+        </p>
+        <div>
+          
+        </div>
       </main>
     </div>
   );
