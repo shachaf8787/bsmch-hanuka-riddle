@@ -13,11 +13,11 @@ export const Main = (props) => {
   return (
     <main>
       <CloseBtn onToggleText={toggleTextHandler} isOpen={isOpen}/>
-      <p className="text">
+      {isOpen && <p className="text">
         The universe is big. It’s vast and complicated and ridiculous. And
         sometimes, very rarely, impossible things just happen and we call them
         miracles
-      </p>
+      </p>}
       <div className="arrows-container">
         <Arrow arrowDirection="prev" onClick={props.onNextArrow} />
         <Arrow arrowDirection="next" onClick={props.onPrevArrow} />
