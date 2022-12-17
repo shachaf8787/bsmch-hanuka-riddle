@@ -14,8 +14,14 @@
   margin-inline: 0.5em;
 }
 
-.btn:hover {
+.btn.onclick {
   background-color: var(--white);
   stroke: var(--grey);
   transition: all 200ms ease;
 }
+
+/* .btn:hover {
+  background-color: var(--white);
+  stroke: var(--grey);
+  transition: all 200ms ease;
+} */

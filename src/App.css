@@ -29,6 +29,7 @@ main > * {
 
 .direction-arrow {
   width: 90vw;
+  transform: rotate(180deg);
   margin-inline: auto;
   height: 1px;
   background-color: var(--grey);

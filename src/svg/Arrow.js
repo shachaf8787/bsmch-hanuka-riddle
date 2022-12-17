@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Arrow.module.css";
 
 const Arrow = (props) => {
+  const [clicked, setClicked] = useState(false);
+
+  const onClickHandler = () => {
+    props.onClick();
+    setClicked(true);
+  };
+
+  if (clicked) {
+    setTimeout(() => {
+      setClicked(false);
+    }, 200);
+  }
+
+  const svgClassName = `${classes.btn} ${
+    classes[`icon-${props.arrowDirection || "next"}`]
+  } ${clicked ? classes["onclick"] : ""}`;
+
+  console.log(svgClassName);
+
   return (
     <svg
       width="43"
@@ -9,8 +28,8 @@ const Arrow = (props) => {
       viewBox="0 0 43 21"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={`${classes.btn} ${classes[`icon-${props.arrowDirection}`]}`}
-      onClick={props.onClick}
+      className={svgClassName}
+      onClick={onClickHandler}
     >
       <path
         d="M1 11H29"
