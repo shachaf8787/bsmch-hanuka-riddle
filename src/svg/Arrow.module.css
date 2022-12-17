@@ -1,0 +1,21 @@
+.icon-prev {
+  transform: rotate(180deg);
+}
+
+.btn {
+  transition: all 200ms ease;
+  cursor: pointer;
+  stroke: var(--cta-color);
+  background-color: var(--dark-grey);
+  border-radius: 6px;
+  padding: 0.8em;
+  width: 86px;
+  height: 49px;
+  margin-inline: 0.5em;
+}
+
+.btn:hover {
+  background-color: var(--white);
+  stroke: var(--grey);
+  transition: all 200ms ease;
+}

@@ -1,7 +1,62 @@
 import "./App.css";
-import Hanukia from "./svg/Hanukia";
+import Hanukia from "./components/Hanukia";
+import Arrow from "./svg/Arrow";
+import { useState } from "react";
+
+const DUMMY_CANDLES_DATA = [
+  {
+    id: "m1",
+    participating: false,
+    active: false,
+  },
+  {
+    id: "m2",
+    participating: false,
+    active: false,
+  },
+  {
+    id: "m3",
+    participating: false,
+    active: false,
+  },
+  {
+    id: "m4",
+    participating: false,
+    active: false,
+  },
+  {
+    id: "m5",
+    participating: false,
+    active: false,
+  },
+  {
+    id: "m6",
+    participating: false,
+    active: false,
+  },
+  {
+    id: "m7",
+    participating: false,
+    active: false,
+  },
+  {
+    id: "m8",
+    participating: false,
+    active: false,
+  },
+];
 
 function App() {
+  const [candlesData, setCandlesData] = useState(DUMMY_CANDLES_DATA);
+
+  const handleNextArrow = () => {
+    console.log("next combination");
+  }
+
+  const handlePrevArrow = () => {
+    console.log("prev combination");
+  }
+
   return (
     <div className="App">
       <header>
@@ -14,7 +69,7 @@ function App() {
         <h2 className="subTitle">חידת חנוכה</h2>
       </header>
       <figure>
-        <Hanukia />
+        <Hanukia candlesData={candlesData}/>
       </figure>
       <main>
         <p className="text">
@@ -22,8 +77,9 @@ function App() {
           sometimes, very rarely, impossible things just happen and we call them
           miracles
         </p>
-        <div>
-          
+        <div className="arrows-container">
+          <Arrow arrowDirection="prev" onClick={handlePrevArrow}/>
+          <Arrow arrowDirection="next" onClick={handleNextArrow}/>
         </div>
       </main>
     </div>
