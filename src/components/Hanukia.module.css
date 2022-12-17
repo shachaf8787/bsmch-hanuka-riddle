@@ -1,15 +1,49 @@
 .candles-container {
+  position: relative;
   grid-area: 1;
-  display: flex;
+  display: grid;
+  grid-template-areas:
+    'headLeft middle headRight'
+    'left middle right';
+  grid-template-columns: 145px 48px 145px;
+  grid-template-rows: 20px 30px;
   margin-inline: auto;
   justify-content: space-between;
-  width: calc(315px);
-  height: fit-content;  
   z-index: 2;
 }
+
+.candle-container.middle {
+  grid-area: middle;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  bottom: 0px;
+}
+
+.candles-container::after {
+  content: "";
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -150px;
+  position: absolute;
+  margin-inline: auto;
+  overflow: visible;
+  background-image: url('../assests/middle-candle-glow_2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 40%;
+  width: 240px;
+  height: 240px;
+  opacity: 1;
+}
+
 .skeleton {
   grid-row: 2;
-  top: -50px;
+  top: -30px;
   position: relative;
   width: 300px;
   --skeletonWidth: 300px;
@@ -24,27 +58,24 @@
   height: 50px;
 }
 
-.candle-holder.middle {
-  position: relative;
-  bottom: 20px;
-}
-
 .cluster-right {
+  grid-area: left;
   display: flex;
   flex-direction: row;
 
 }
 
-.cluster-right > * {
+.cluster-right>* {
   margin-right: 13px;
 }
 
 .cluster-left {
+  grid-area: right;
   display: flex;
   flex-direction: row;
-
+  justify-content: end;
 }
 
-.cluster-left > * {
+.cluster-left>* {
   margin-left: 13px;
 }

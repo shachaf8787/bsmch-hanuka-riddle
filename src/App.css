@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  height: 100vh;
 }
 
 .App>*:not(:last-child) {
@@ -15,7 +16,7 @@ figure {
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: 100vw;
-  top: 20px;
+  margin-block: 60px;
 }
 
 main {

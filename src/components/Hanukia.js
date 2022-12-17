@@ -28,7 +28,9 @@ const Hanukia = (props) => {
       />
       <div className={classes["candles-container"]}>
         <div className={classes["cluster-left"]}>{CandleElementsLeft}</div>
-        <div className={`${classes["candle-holder"]} ${classes["middle"]}`}></div>
+        <div className={`${classes["candle-container"]} ${classes["middle"]}`}>
+          <div className={`${classes["candle-holder"]}`}></div>
+        </div>
         <div className={classes["cluster-right"]}>{CandleElementsRight}</div>
       </div>
     </>
