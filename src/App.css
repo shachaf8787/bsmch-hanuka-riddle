@@ -19,6 +19,19 @@ figure {
   margin-block: 60px;
 }
 
+figure::before {
+  position: absolute;
+  content: "";
+  width: 100vw;
+  height: 500px;
+  display: block;
+  background-image: url(./assests/background.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  bottom: -60px;
+
+}
+
 main {
   position: absolute;
   bottom: 0;
@@ -30,7 +43,7 @@ main {
   padding-top: 20px;
 }
 
-main>* {
+main> * {
   margin-bottom: var(--vertical-space);
 }
 
