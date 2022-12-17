@@ -81,6 +81,7 @@ function App() {
           <Arrow arrowDirection="prev" onClick={handlePrevArrow}/>
           <Arrow arrowDirection="next" onClick={handleNextArrow}/>
         </div>
+        <div className="direction-arrow"></div>
       </main>
     </div>
   );

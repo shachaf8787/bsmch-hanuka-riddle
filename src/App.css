@@ -26,3 +26,34 @@ main {
 main > * {
   margin-bottom: var(--vertical-space);
 }
+
+.direction-arrow {
+  width: 90vw;
+  margin-inline: auto;
+  height: 1px;
+  background-color: var(--grey);
+}
+
+.direction-arrow::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 1px;
+  transform: rotate(45deg);
+  background-color: var(--grey);
+  bottom: 7px;
+  right: -2px;
+}
+
+.direction-arrow::before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 1px;
+  transform: rotate(-45deg);
+  background-color: var(--grey);
+  bottom: -7px;
+  right: -2px;
+}
