@@ -1,18 +1,19 @@
 import React from "react";
+import FullCandle from "../svg/FullCandle";
 import classes from "./Hanukia.module.css";
 
 const Hanukia = (props) => {
+  const candleElement = (element) => (
+    <FullCandle key={element.id} className={classes["full-candle"]} />
+  );
+
   const CandleElementsLeft = props.candlesData
     .filter((item, index) => index < 4)
-    .map((element) => (
-      <div key={element.id} className={`${classes["candle-holder"]}`}></div>
-    ));
+    .map((element) => candleElement(element));
 
   const CandleElementsRight = props.candlesData
     .filter((item, index) => index >= 4)
-    .map((element) => (
-      <div key={element.id} className={`${classes["candle-holder"]}`}></div>
-    ));
+    .map((element) => candleElement(element));
 
   // Component's Returned JSX
   return (

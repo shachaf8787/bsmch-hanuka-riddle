@@ -5,7 +5,7 @@
   grid-template-areas:
     'headLeft middle headRight'
     'left middle right';
-  grid-template-columns: 145px 48px 145px;
+  grid-template-columns: 135px 68px 135px;
   grid-template-rows: 20px 30px;
   margin-inline: auto;
   justify-content: space-between;
@@ -56,18 +56,24 @@
   background-repeat: no-repeat;
   background-size: contain;
   width: 20px;
-  height: 50px;
+  height: 100px;
+}
+
+.full-candle {
+  position: relative;
+  transform: scale(3.5);
+  bottom: 37px;
 }
 
 .cluster-right {
   grid-area: left;
   display: flex;
   flex-direction: row;
-
 }
 
-.cluster-right>* {
+.cluster-right> * {
   margin-right: 13px;
+  left: 4px;
 }
 
 .cluster-left {
@@ -79,4 +85,5 @@
 
 .cluster-left>* {
   margin-left: 13px;
+  right: 4px;
 }
