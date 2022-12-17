@@ -10,7 +10,8 @@
   --black-bg--hover: #030b1295;
   --dark-grey: #162430;
   --grey: #3c5568;
-  --text-color: #fff ; /* #9fadbf*/
+  --text-color: #fff;
+  /* #9fadbf*/
   --border-color: #57677a;
   --cta-color: #A5BDDA;
   --white: #fff;
@@ -63,6 +64,8 @@ body {
 }
 
 .title {
+  position: relative;
+  top: -10px;
   font-size: 2.7rem;
   font-weight: 700;
   color: var(--white);
@@ -70,6 +73,8 @@ body {
 }
 
 .subTitle {
+  position: relative;
+  top: -10px;
   color: var(--white);
   font-weight: 200;
   letter-spacing: 0.12rem;
@@ -114,7 +119,7 @@ body {
   font-weight: 200;
   color: var(--text-color);
   word-break: break-word;
-  text-overflow:ellipsis;
+  text-overflow: ellipsis;
 }
 
 

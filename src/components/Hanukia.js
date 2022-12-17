@@ -7,14 +7,30 @@ import classes from "./Hanukia.module.css";
 const Hanukia = (props) => {
   // const AllGradientsId = new Gradients("linear-gradient", 3).getGradientArray();
 
-  const CandleElements = props.candlesData.map((item) => {
-    return <div key={item.id} className={classes["candle-holder"]}></div>;
-  });
+  const CandleElementsLeft = props.candlesData
+    .filter((item, index) => index < 4)
+    .map((element) => (
+      <div key={element.id} className={`${classes["candle-holder"]}`}></div>
+    ));
+
+  const CandleElementsRight = props.candlesData
+    .filter((item, index) => index >= 4)
+    .map((element) => (
+      <div key={element.id} className={`${classes["candle-holder"]}`}></div>
+    ));
 
   // Component's Returned JSX
   return (
     <>
-      <div className={classes["candles-container"]}>{CandleElements}</div>
+      <img
+        className={classes["skeleton"]}
+        src={process.env.PUBLIC_URL + "./skeleton.svg"}
+      />
+      <div className={classes["candles-container"]}>
+        <div className={classes["cluster-left"]}>{CandleElementsLeft}</div>
+        <div className={`${classes["candle-holder"]} ${classes["middle"]}`}></div>
+        <div className={classes["cluster-right"]}>{CandleElementsRight}</div>
+      </div>
     </>
   );
 };

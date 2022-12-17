@@ -1,14 +1,50 @@
 .candles-container {
+  grid-area: 1;
   display: flex;
   margin-inline: auto;
   justify-content: space-between;
+  width: calc(315px);
+  height: fit-content;  
+  z-index: 2;
+}
+.skeleton {
+  grid-row: 2;
+  top: -50px;
+  position: relative;
   width: 300px;
+  --skeletonWidth: 300px;
+  margin-inline: auto;
 }
 
-.candle-holder{
+.candle-holder {
   background-image: url(../assests/SingleCandle.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  width: 30px;
+  width: 20px;
   height: 50px;
+}
+
+.candle-holder.middle {
+  position: relative;
+  bottom: 20px;
+}
+
+.cluster-right {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.cluster-right > * {
+  margin-right: 13px;
+}
+
+.cluster-left {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.cluster-left > * {
+  margin-left: 13px;
 }

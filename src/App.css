@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.App > *:not(:last-child) {
+.App>*:not(:last-child) {
   margin-bottom: var(--vertical-space);
 }
 
@@ -10,7 +10,13 @@
   width: 4rem;
 }
 
-figure {}
+figure {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 100vw;
+  top: 20px;
+}
 
 main {
   position: absolute;
@@ -18,12 +24,12 @@ main {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  background-color: black;
-  backdrop-filter: blur(27px);
+  background-color: rgba(0, 0, 0, 0.555);
+  backdrop-filter: blur(20px);
   padding-top: 20px;
 }
 
-main > * {
+main>* {
   margin-bottom: var(--vertical-space);
 }
 
