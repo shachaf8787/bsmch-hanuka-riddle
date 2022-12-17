@@ -3,17 +3,18 @@ import Hanukia from "./components/UI/Hanukia";
 import { useState } from "react";
 import { Main } from "./components/Layout/Main";
 
+const NUM_OF_COMBINATIONS = 10;
 
 const DUMMY_CANDLES_DATA = [
   {
     id: "m1",
-    participating: false,
-    active: false,
+    participating: true,
+    active: true,
   },
   {
     id: "m2",
-    participating: false,
-    active: false,
+    participating: true,
+    active: true,
   },
   {
     id: "m3",
@@ -27,12 +28,12 @@ const DUMMY_CANDLES_DATA = [
   },
   {
     id: "m5",
-    participating: false,
-    active: false,
+    participating: true,
+    active: true,
   },
   {
     id: "m6",
-    participating: false,
+    participating: true,
     active: false,
   },
   {
@@ -49,14 +50,27 @@ const DUMMY_CANDLES_DATA = [
 
 function App() {
   const [candlesData, setCandlesData] = useState(DUMMY_CANDLES_DATA);
+  const [combinationNum, setCombinationNum] = useState(0);
 
   const handleNextArrow = () => {
     console.log("next combination");
-  }
+    setCombinationNum((prevNo) => {
+      if (prevNo === NUM_OF_COMBINATIONS) {
+        return 0;
+      }
+      return prevNo + 1;
+    });
+  };
 
   const handlePrevArrow = () => {
     console.log("prev combination");
-  }
+    setCombinationNum((prevNo) => {
+      if (prevNo === 0) {
+        return NUM_OF_COMBINATIONS;
+      }
+      return prevNo - 1;
+    });
+  };
 
   return (
     <div className="App">
@@ -70,9 +84,9 @@ function App() {
         <h2 className="subTitle">חידת חנוכה</h2>
       </header>
       <figure>
-        <Hanukia candlesData={candlesData}/>
+        <Hanukia candlesData={candlesData} />
       </figure>
-      <Main onNextArrow={handleNextArrow} onPrevArrow={handlePrevArrow}/>
+      <Main onNextArrow={handleNextArrow} onPrevArrow={handlePrevArrow} />
     </div>
   );
 }

@@ -4,7 +4,7 @@ import classes from "./Hanukia.module.css";
 
 const Hanukia = (props) => {
   const candleElement = (element) => (
-    <FullCandle key={element.id} className={classes["full-candle"]} />
+    <FullCandle key={element.id} element={element} className={classes["full-candle"]} />
   );
 
   const CandleElementsLeft = props.candlesData

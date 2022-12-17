@@ -66,9 +66,10 @@
 }
 
 .cluster-right {
+  flex-grow: 1;
   grid-area: left;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
 }
 
 .cluster-right> * {
@@ -79,7 +80,7 @@
 .cluster-left {
   grid-area: right;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: end;
 }
 

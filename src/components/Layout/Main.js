@@ -4,7 +4,7 @@ import Arrow from "../UI/Arrow";
 import { useState } from "react";
 
 export const Main = (props) => {
-  const [isOpen, setIsOpen] = useState();
+  const [isOpen, setIsOpen] = useState(true);
   
   const toggleTextHandler = () => {
     setIsOpen(prev => !prev)
@@ -19,8 +19,8 @@ export const Main = (props) => {
         miracles
       </p>}
       <div className="arrows-container">
-        <Arrow arrowDirection="prev" onClick={props.onNextArrow} />
-        <Arrow arrowDirection="next" onClick={props.onPrevArrow} />
+        <Arrow arrowDirection="prev" onClick={props.onPrevArrow} />
+        <Arrow arrowDirection="next" onClick={props.onNextArrow} />
       </div>
       <div className="direction-arrow"></div>
     </main>
