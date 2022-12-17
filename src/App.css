@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   height: 100vh;
+  animation: fadein forwards 1000ms;
 }
 
 .App>*:not(:last-child) {
@@ -9,6 +10,7 @@
 
 #logo {
   width: 4rem;
+  animation: fadein forwards 1000ms;
 }
 
 figure {
@@ -17,6 +19,8 @@ figure {
   grid-template-rows: auto auto;
   grid-template-columns: 100vw;
   margin-block: 60px;
+  padding-bottom: 250px;
+  animation: fadein forwards 1000ms;
 }
 
 figure::before {
@@ -26,11 +30,22 @@ figure::before {
   height: 500px;
   display: block;
   background-image: url(./assests/background.svg);
-  background-size: 100%;
+  background-size: 400px;
+  background-position-x: 50%;
   background-repeat: no-repeat;
-  bottom: -60px;
-
+  top: -100px;
+  animation: fadein forwards 1000ms;
 }
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 main {
   position: absolute;
@@ -41,9 +56,10 @@ main {
   background-color: rgba(0, 0, 0, 0.555);
   backdrop-filter: blur(20px);
   padding-top: 20px;
+  z-index: 2;
 }
 
-main> * {
+main>* {
   margin-bottom: var(--vertical-space);
 }
 
