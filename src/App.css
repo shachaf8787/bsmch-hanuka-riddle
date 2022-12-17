@@ -1,16 +1,15 @@
 .App {
   text-align: center;
   height: 100vh;
-  animation: fadein forwards 1000ms;
 }
 
 .App>*:not(:last-child) {
   margin-bottom: var(--vertical-space);
+  animation: fadein forwards 1000ms;
 }
 
 #logo {
   width: 4rem;
-  animation: fadein forwards 1000ms;
 }
 
 figure {
@@ -20,7 +19,6 @@ figure {
   grid-template-columns: 100vw;
   margin-block: 60px;
   padding-bottom: 250px;
-  animation: fadein forwards 1000ms;
 }
 
 figure::before {
@@ -34,7 +32,6 @@ figure::before {
   background-position-x: 50%;
   background-repeat: no-repeat;
   top: -100px;
-  animation: fadein forwards 1000ms;
 }
 
 @keyframes fadein {
@@ -57,6 +54,7 @@ main {
   backdrop-filter: blur(20px);
   padding-top: 20px;
   z-index: 2;
+  animation: fadein forwards 1000ms;
 }
 
 main>* {
