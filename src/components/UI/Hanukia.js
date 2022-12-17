@@ -1,12 +1,7 @@
-import { nanoid } from "nanoid";
 import React from "react";
-import { useState } from "react";
-import { Gradients } from "../classes/classes";
 import classes from "./Hanukia.module.css";
 
 const Hanukia = (props) => {
-  // const AllGradientsId = new Gradients("linear-gradient", 3).getGradientArray();
-
   const CandleElementsLeft = props.candlesData
     .filter((item, index) => index < 4)
     .map((element) => (

@@ -1,25 +1,19 @@
 import React, { useState } from "react";
+import useOnclickStyle from "../../hooks/use-onclick-style";
 import classes from "./Arrow.module.css";
 
 const Arrow = (props) => {
   const [clicked, setClicked] = useState(false);
 
+  const { applyAnimatedClick, animatedClassName } = useOnclickStyle(
+    `${classes.btn} ${classes[`icon-${props.arrowDirection || "next"}`]}`,
+    classes["onclick"]
+  );
+
   const onClickHandler = () => {
     props.onClick();
-    setClicked(true);
+     applyAnimatedClick();
   };
-
-  if (clicked) {
-    setTimeout(() => {
-      setClicked(false);
-    }, 200);
-  }
-
-  const svgClassName = `${classes.btn} ${
-    classes[`icon-${props.arrowDirection || "next"}`]
-  } ${clicked ? classes["onclick"] : ""}`;
-
-  console.log(svgClassName);
 
   return (
     <svg
@@ -28,7 +22,7 @@ const Arrow = (props) => {
       viewBox="0 0 43 21"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={svgClassName}
+      className={animatedClassName}
       onClick={onClickHandler}
     >
       <path

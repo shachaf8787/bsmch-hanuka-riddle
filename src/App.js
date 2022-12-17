@@ -1,7 +1,8 @@
 import "./App.css";
-import Hanukia from "./components/Hanukia";
-import Arrow from "./svg/Arrow";
+import Hanukia from "./components/UI/Hanukia";
 import { useState } from "react";
+import { Main } from "./components/Layout/Main";
+
 
 const DUMMY_CANDLES_DATA = [
   {
@@ -71,18 +72,7 @@ function App() {
       <figure>
         <Hanukia candlesData={candlesData}/>
       </figure>
-      <main>
-        <p className="text">
-          The universe is big. It’s vast and complicated and ridiculous. And
-          sometimes, very rarely, impossible things just happen and we call them
-          miracles
-        </p>
-        <div className="arrows-container">
-          <Arrow arrowDirection="prev" onClick={handlePrevArrow}/>
-          <Arrow arrowDirection="next" onClick={handleNextArrow}/>
-        </div>
-        <div className="direction-arrow"></div>
-      </main>
+      <Main onNextArrow={handleNextArrow} onPrevArrow={handlePrevArrow}/>
     </div>
   );
 }

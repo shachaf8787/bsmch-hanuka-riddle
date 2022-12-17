@@ -1,0 +1,32 @@
+.close-btn-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.close {
+  position: relative;
+  top: -40px;
+  background-color: var(--dark-grey);
+  width: 39px;
+  aspect-ratio: 1;
+  background-image: url('../../assests/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 55%;
+  border-radius: 50%;
+  border: none;
+  transition: all 200ms ease;
+  transform-origin: center center;
+}
+
+.close.onclick {
+  background-color: var(--white);
+  stroke: var(--grey);
+  transition: all 200ms ease;
+}
+
+.close.closed {
+  transform: rotate(180deg);
+}
