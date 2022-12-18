@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Main } from "./components/Layout/Main";
 import allCandlesData from "./store/candles-data";
 
-const NUM_OF_COMBINATIONS = 10;
+const NUM_OF_COMBINATIONS = 1;
 
 // delete dummy_data  when using real data
 const DUMMY_CANDLES_DATA = [
@@ -50,10 +50,52 @@ const DUMMY_CANDLES_DATA = [
       active: false,
     },
   ],
+  [
+    {
+      id: "m1",
+      participating: true,
+      active: false,
+    },
+    {
+      id: "m2",
+      participating: true,
+      active: true,
+    },
+    {
+      id: "m3",
+      participating: false,
+      active: false,
+    },
+    {
+      id: "m4",
+      participating: false,
+      active: false,
+    },
+    {
+      id: "m5",
+      participating: true,
+      active: true,
+    },
+    {
+      id: "m6",
+      participating: true,
+      active: false,
+    },
+    {
+      id: "m7",
+      participating: false,
+      active: false,
+    },
+    {
+      id: "m8",
+      participating: false,
+      active: false,
+    },
+  ],
 ];
 
 function App() {
-  const [candlesData, setCandlesData] = useState(DUMMY_CANDLES_DATA);
+  const candlesData = DUMMY_CANDLES_DATA; // allCandlesData
   const [combinationNum, setCombinationNum] = useState(0);
 
   const handleNextArrow = () => {
