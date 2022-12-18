@@ -3,8 +3,8 @@
   grid-area: 1;
   display: grid;
   grid-template-areas:
-    'headLeft middle headRight'
-    'left middle right';
+    "headLeft middle headRight"
+    "left middle right";
   grid-template-columns: 135px 68px 135px;
   grid-template-rows: 20px 30px;
   margin-inline: auto;
@@ -32,7 +32,7 @@
   position: absolute;
   margin-inline: auto;
   overflow: visible;
-  background-image: url('../../assests/middle-candle-glow_2.svg');
+  background-image: url("../../assests/middle-candle-glow_2.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 50%;
@@ -72,7 +72,7 @@
   flex-direction: row-reverse;
 }
 
-.cluster-right> * {
+.cluster-right > * {
   margin-right: 13px;
   left: 4px;
 }
@@ -84,7 +84,7 @@
   justify-content: end;
 }
 
-.cluster-left>* {
+.cluster-left > * {
   margin-left: 13px;
   right: 4px;
 }

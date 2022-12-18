@@ -1,0 +1,37 @@
+.candle.enter-active {
+  position: relative;
+  animation: candleFadein forwards 300ms ease;
+  transform-origin: 0;
+}
+
+.candle.exit-active {
+  position: relative;
+  animation: candleFadeout forwards 300ms ease;
+  transform-origin: 0;
+}
+
+.fire.enter-active {
+  animation: candleFadein forwards 300ms ease;
+}
+
+.fire.exit-active {
+  animation: candleFadeout forwards 300ms ease;
+}
+
+@keyframes candleFadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes candleFadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
