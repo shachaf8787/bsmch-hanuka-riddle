@@ -1,3 +1,4 @@
+
 .candles-container {
   position: relative;
   grid-area: 1;
@@ -47,7 +48,6 @@
   top: -30px;
   position: relative;
   width: 300px;
-  --skeletonWidth: 300px;
   margin-inline: auto;
 }
 

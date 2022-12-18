@@ -1,0 +1,17 @@
+.main {
+  position: var(--main-position);
+  width: 100vw;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: var(--main-background-color);
+  backdrop-filter: var(--main-backdrop-filter);
+  padding-top: 20px;
+  z-index: 2;
+  animation: fadein forwards 1000ms;
+}
+
+.main > * {
+  margin-bottom: var(--vertical-space);
+}

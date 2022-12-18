@@ -2,6 +2,7 @@ import React from "react";
 import CloseBtn from "../UI/CloseBtn";
 import Arrow from "../UI/Arrow";
 import { useState } from "react";
+import classes from "./Main.module.css"
 
 export const Main = (props) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -11,7 +12,7 @@ export const Main = (props) => {
   };
 
   return (
-    <main>
+    <main className={classes.main}>
       <CloseBtn onToggleText={toggleTextHandler} isOpen={isOpen}/>
       {isOpen && <p className="text">
         The universe is big. It’s vast and complicated and ridiculous. And

@@ -1,19 +1,21 @@
 .close-btn-container {
   position: relative;
   width: 100%;
-  height: 20px;
+  height: 0px;
   display: flex;
   justify-content: center;
   margin-bottom: 0ch;
+  visibility: var(--close-btn-visibility);
 }
 
 .close {
+  cursor: pointer;
   position: relative;
   background-color: var(--dark-grey);
   width: 39px;
   top: -40px;
   height: 39px;
-  background-image: url('../../assests/arrow-down.svg');
+  background-image: url("../../assests/arrow-down.svg");
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-position-y: 55%;

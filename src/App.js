@@ -1,4 +1,5 @@
 import "./App.css";
+import "./media-queries.css"
 import Hanukia from "./components/UI/Hanukia";
 import { useState } from "react";
 import { Main } from "./components/Layout/Main";
