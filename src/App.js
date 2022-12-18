@@ -2,50 +2,54 @@ import "./App.css";
 import Hanukia from "./components/UI/Hanukia";
 import { useState } from "react";
 import { Main } from "./components/Layout/Main";
+import allCandlesData from "./store/candles-data";
 
 const NUM_OF_COMBINATIONS = 10;
 
+// delete dummy_data  when using real data
 const DUMMY_CANDLES_DATA = [
-  {
-    id: "m1",
-    participating: true,
-    active: true,
-  },
-  {
-    id: "m2",
-    participating: true,
-    active: true,
-  },
-  {
-    id: "m3",
-    participating: false,
-    active: false,
-  },
-  {
-    id: "m4",
-    participating: false,
-    active: false,
-  },
-  {
-    id: "m5",
-    participating: true,
-    active: true,
-  },
-  {
-    id: "m6",
-    participating: true,
-    active: false,
-  },
-  {
-    id: "m7",
-    participating: false,
-    active: false,
-  },
-  {
-    id: "m8",
-    participating: false,
-    active: false,
-  },
+  [
+    {
+      id: "m1",
+      participating: true,
+      active: true,
+    },
+    {
+      id: "m2",
+      participating: true,
+      active: true,
+    },
+    {
+      id: "m3",
+      participating: false,
+      active: false,
+    },
+    {
+      id: "m4",
+      participating: false,
+      active: false,
+    },
+    {
+      id: "m5",
+      participating: true,
+      active: true,
+    },
+    {
+      id: "m6",
+      participating: true,
+      active: false,
+    },
+    {
+      id: "m7",
+      participating: false,
+      active: false,
+    },
+    {
+      id: "m8",
+      participating: false,
+      active: false,
+    },
+  ],
 ];
 
 function App() {
@@ -84,7 +88,7 @@ function App() {
         <h2 className="subTitle">חידת חנוכה</h2>
       </header>
       <figure>
-        <Hanukia candlesData={candlesData} />
+        <Hanukia candlesData={candlesData[combinationNum]} />
       </figure>
       <Main onNextArrow={handleNextArrow} onPrevArrow={handlePrevArrow} />
     </div>
