@@ -1,3 +1,14 @@
+.hanukia-container {
+  position: relative;
+  grid-area: a;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.background {
+  position: relative;
+  grid-area: a;
+}
 
 .candles-container {
   position: relative;
@@ -45,7 +56,7 @@
 
 .skeleton {
   grid-row: 2;
-  top: -30px;
+  top: -33px;
   position: relative;
   width: 300px;
   margin-inline: auto;

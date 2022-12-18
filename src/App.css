@@ -19,16 +19,21 @@ figure {
   overflow: visible;
   position: relative;
   height: var(--figure-height);
-  position: relative;
-  display: flex;
+  /* display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  justify-content: center; */
+  display: grid;
+  grid-template-areas: 'a';
+  grid-template-columns: auto;
+  grid-template-rows: auto;
   justify-content: center;
+  align-content: center;
   top: min(30px, 10vh);
   transform: var(--hanukia-scale);
 }
 
-figure::before {
+/* figure::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -39,7 +44,7 @@ figure::before {
   background-position-x: 50%;
   background-repeat: no-repeat;
   top: var(--figure-before-top);
-}
+} */
 
 @keyframes fadein {
   from {

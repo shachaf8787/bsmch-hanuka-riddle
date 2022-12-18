@@ -50,9 +50,16 @@
     --figure-before-top: -10px;
   }
 }
+
 @media screen and (min-height: 1000px) {
   :root {
     --figure-before-top: 100px;
+  }
+}
+
+@media screen and (min-height: 1250px) {
+  :root {
+    --figure-before-top: 200px;
   }
 }
 

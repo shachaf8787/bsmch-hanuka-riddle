@@ -22,17 +22,25 @@ const Hanukia = (props) => {
   // Component's Returned JSX
   return (
     <>
-      <img
-        className={classes["skeleton"]}
-        src={process.env.PUBLIC_URL + "./skeleton.svg"}
-      />
-      <div className={classes["candles-container"]}>
-        <div className={classes["cluster-left"]}>{CandleElementsLeft}</div>
-        <div className={`${classes["candle-container"]} ${classes["middle"]}`}>
-          <div className={`${classes["candle-holder"]}`}></div>
+      <div className={classes["hanukia-container"]}>
+        <img
+          className={classes["skeleton"]}
+          src={process.env.PUBLIC_URL + "./skeleton.svg"}
+        />
+        <div className={classes["candles-container"]}>
+          <div className={classes["cluster-left"]}>{CandleElementsLeft}</div>
+          <div
+            className={`${classes["candle-container"]} ${classes["middle"]}`}
+          >
+            <div className={`${classes["candle-holder"]}`}></div>
+          </div>
+          <div className={classes["cluster-right"]}>{CandleElementsRight}</div>
         </div>
-        <div className={classes["cluster-right"]}>{CandleElementsRight}</div>
       </div>
+      <img
+        className={classes["backgound"]}
+        src={process.env.PUBLIC_URL + "background.svg"}
+      />
     </>
   );
 };
