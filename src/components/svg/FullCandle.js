@@ -56,7 +56,6 @@ const FullCandle = (props) => {
       dataname="Layer 2"
       className={`${classes.svg} ${props.className}`}
       xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 200 259.03"
     >
       <defs>
