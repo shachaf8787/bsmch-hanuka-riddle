@@ -1,3 +1,17 @@
+.btn-container {
+  background-color: transparent;
+  border: none;
+  --btn-background: var(--dark-grey);
+  --onclick-background-color: var(--white);
+  --btn-stroke: var(--cta-color)
+}
+
+.btn-container:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+  --btn-stroke: var(--grey)
+}
+
 .icon-prev {
   transform: rotate(180deg);
 }
@@ -5,8 +19,8 @@
 .btn {
   transition: all 200ms ease;
   cursor: pointer;
-  stroke: var(--cta-color);
-  background-color: var(--dark-grey);
+  stroke: var(--btn-stroke);
+  background-color: var(--btn-background);
   border-radius: 6px;
   padding: 0.8em;
   width: 86px;
@@ -15,7 +29,7 @@
 }
 
 .btn.onclick {
-  background-color: var(--white);
+  background-color: var(--onclick-background-color);
   stroke: var(--grey);
   transition: all 200ms ease;
 }

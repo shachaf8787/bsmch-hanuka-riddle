@@ -11,6 +11,20 @@ export const Main = (props) => {
     setIsOpen((prev) => !prev);
   };
 
+  const isPrevArrowDisabled = () => {
+    if (0 === props.combinationNum) {
+      return true;
+    }
+    return false;
+  };
+
+  const isNextArrowDisabled = () => {
+    if (props.totalCombinations === props.combinationNum) {
+      return true;
+    }
+    return false;
+  };
+
   return (
     <main className={classes.main}>
       <CloseBtn onToggleText={toggleTextHandler} isOpen={isOpen} />
@@ -22,8 +36,16 @@ export const Main = (props) => {
         </p>
       )}
       <div className="arrows-container">
-        <Arrow arrowDirection="prev" onClick={props.onPrevArrow} />
-        <Arrow arrowDirection="next" onClick={props.onNextArrow} />
+        <Arrow
+          arrowDirection="prev"
+          onClick={props.onPrevArrow}
+          isDisabled={isPrevArrowDisabled()}
+        />
+        <Arrow
+          arrowDirection="next"
+          onClick={props.onNextArrow}
+          isDisabled={isNextArrowDisabled()}
+        />
       </div>
       <div className="direction-arrow"></div>
     </main>

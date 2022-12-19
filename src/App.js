@@ -45,7 +45,12 @@ function App() {
         <h2 className="subTitle">חידת חנוכה</h2>
       </header>
       <Hanukia candlesData={candlesData[combinationNum]} />
-      <Main onNextArrow={handleNextArrow} onPrevArrow={handlePrevArrow} />
+      <Main
+        onNextArrow={handleNextArrow}
+        onPrevArrow={handlePrevArrow}
+        combinationNum={combinationNum}
+        totalCombinations={NUM_OF_COMBINATIONS}
+      />
     </div>
   );
 }
