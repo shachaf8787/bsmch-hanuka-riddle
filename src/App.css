@@ -35,7 +35,7 @@ figure {
 
 .direction-arrow {
   width: 90vw;
-  transform: rotate(180deg);
+  transform: rotate(0deg);
   margin-inline: auto;
   height: 1px;
   background-color: var(--grey);
@@ -63,4 +63,8 @@ figure {
   background-color: var(--grey);
   bottom: -7px;
   right: -2px;
+}
+
+.arrows-container {
+  transform: rotate(180deg);
 }

@@ -52,7 +52,11 @@ const FullCandle = (props) => {
 
   return (
     <>
-      <div className={classes[".full-candle"]}></div>
+      <div className={classes["full-candle"]}>
+        <div className={classes['candle-can']}></div>
+        {hasBottom && <div className={activeCandleCanClassName}></div>}
+        {hasFlame && <div className={activeFireClassName}></div>}
+      </div>
     </>
     // <svg
     //   id="Layer_2"
