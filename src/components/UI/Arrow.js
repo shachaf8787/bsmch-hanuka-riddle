@@ -13,8 +13,6 @@ const Arrow = (props) => {
     applyAnimatedClick();
   };
 
-  console.log(props.isDisabled);
-
   return (
     <button disabled={props.isDisabled} className={classes["btn-container"]}>
       <svg

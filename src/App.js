@@ -14,7 +14,7 @@ function App() {
   const [combinationNum, setCombinationNum] = useState(0);
 
   const handleNextArrow = () => {
-    console.log("next combination");
+    ("next combination");
     setCombinationNum((prevNo) => {
       if (prevNo === NUM_OF_COMBINATIONS) {
         return prevNo;
@@ -24,7 +24,6 @@ function App() {
   };
 
   const handlePrevArrow = () => {
-    console.log("prev combination");
     setCombinationNum((prevNo) => {
       if (prevNo === 0) {
         return 0;
