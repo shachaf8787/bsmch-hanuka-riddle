@@ -7,7 +7,6 @@ const Hanukia = (props) => {
     <FullCandle
       key={element.id}
       element={element}
-      className={classes["full-candle"]}
     />
   );
 

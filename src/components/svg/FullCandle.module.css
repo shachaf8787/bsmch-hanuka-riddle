@@ -1,3 +1,9 @@
+.full-candle {
+  position: relative;
+  transform: scale(3.5);
+  bottom: 37px;
+}
+
 .candle.enter-active {
   position: relative;
   animation: candleFadein forwards 300ms ease;

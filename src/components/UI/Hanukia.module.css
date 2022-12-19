@@ -83,12 +83,6 @@
   height: 100px;
 }
 
-.full-candle {
-  position: relative;
-  transform: scale(3.5);
-  bottom: 37px;
-}
-
 .cluster-right {
   flex-grow: 1;
   grid-area: left;
