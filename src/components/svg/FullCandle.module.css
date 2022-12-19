@@ -1,3 +1,45 @@
+.full-candle {
+  position: relative;
+  bottom: 37px;
+}
+
+.candle-can {
+  position: relative;
+  bottom: -37px;
+  background-image: url(../../assests/SingleCandle.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  width: 20px;
+  height: 30px;
+  z-index: 2;
+}
+
+.candle {
+  position: relative;
+  background-image: url(../../assests/candle.svg);
+  background-size: 17px;
+  background-repeat: no-repeat;
+  background-position-x: 48%;
+  width: 20px;
+  height: 30px;
+  bottom: 15px;
+  z-index: 0;
+}
+
+.fire {
+  position: absolute;
+  background-image: url(../../assests/candle-fire.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 48%;
+  width: 100px;
+  height: 100px;
+  bottom: -10px;
+  left: -42px;
+  z-index: 0;
+}
+
 .candle.enter-active {
   position: relative;
   animation: candleFadein forwards 300ms ease;

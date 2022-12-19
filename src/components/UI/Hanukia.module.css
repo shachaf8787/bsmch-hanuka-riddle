@@ -28,7 +28,7 @@
   grid-template-areas:
     "headLeft middle headRight"
     "left middle right";
-  grid-template-columns: 135px 68px 135px;
+  grid-template-columns: 135px 60px 135px;
   grid-template-rows: 20px 30px;
   margin-inline: auto;
   justify-content: space-between;
@@ -81,12 +81,6 @@
   background-size: contain;
   width: 20px;
   height: 100px;
-}
-
-.full-candle {
-  position: relative;
-  transform: scale(3.5);
-  bottom: 37px;
 }
 
 .cluster-right {
