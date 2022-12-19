@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .App> *:not(:last-child) {
@@ -19,32 +19,10 @@ figure {
   overflow: visible;
   position: relative;
   height: var(--figure-height);
-  /* display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: center; */
-  display: grid;
-  grid-template-areas: 'a';
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  justify-content: center;
-  align-content: center;
-  top: min(30px, 10vh);
   transform: var(--hanukia-scale);
+  pointer-events: none;
 }
 
-/* figure::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  display: block;
-  background-image: url(./assests/background.svg);
-  background-size: var(--figure-before-background-size);
-  background-position-x: 50%;
-  background-repeat: no-repeat;
-  top: var(--figure-before-top);
-} */
 
 @keyframes fadein {
   from {

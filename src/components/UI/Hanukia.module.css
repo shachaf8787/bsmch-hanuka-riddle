@@ -1,13 +1,24 @@
 .hanukia-container {
-  position: relative;
-  grid-area: a;
+  position: absolute;
   display: flex;
   flex-direction: column-reverse;
+  grid-column: 1;
+  grid-row: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  transform: scale(--hanukia-scale);
+  z-index: 2;
 }
 
 .background {
-  position: relative;
-  grid-area: a;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  /* transform: scale(2); */
+  width: var(--background-background-size);
 }
 
 .candles-container {
@@ -55,6 +66,8 @@
 }
 
 .skeleton {
+  pointer-events: none;
+
   grid-row: 2;
   top: -33px;
   position: relative;

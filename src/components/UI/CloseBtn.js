@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./CloseBtn.module.css";
 import useOnclickStyle from "../../hooks/use-onclick-style";
 
@@ -18,7 +18,7 @@ const CloseBtn = (props) => {
   }`;
 
   return (
-    <div className={classes['close-btn-container']}>
+    <div className={classes["close-btn-container"]}>
       <button className={closeBtnClassName} onClick={onClickHandler}></button>
     </div>
   );

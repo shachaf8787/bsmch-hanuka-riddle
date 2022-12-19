@@ -21,7 +21,7 @@ const Hanukia = (props) => {
 
   // Component's Returned JSX
   return (
-    <>
+    <figure>
       <div className={classes["hanukia-container"]}>
         <img
           className={classes["skeleton"]}
@@ -38,10 +38,10 @@ const Hanukia = (props) => {
         </div>
       </div>
       <img
-        className={classes["backgound"]}
+        className={classes["background"]}
         src={process.env.PUBLIC_URL + "background.svg"}
       />
-    </>
+    </figure>
   );
 };
 

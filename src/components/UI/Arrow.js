@@ -3,8 +3,6 @@ import useOnclickStyle from "../../hooks/use-onclick-style";
 import classes from "./Arrow.module.css";
 
 const Arrow = (props) => {
-  const [clicked, setClicked] = useState(false);
-
   const { applyAnimatedClick, animatedClassName } = useOnclickStyle(
     `${classes.btn} ${classes[`icon-${props.arrowDirection || "next"}`]}`,
     classes["onclick"]

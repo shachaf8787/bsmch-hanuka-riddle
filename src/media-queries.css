@@ -1,6 +1,6 @@
 :root {
   /* figure variables */
-  --figure-before-background-size: 450px;
+  --background-background-size: min(calc(100vw + 130px), 600px) ;
   --figure-before-top: -100px;
   --figure-height: 400px;
 
@@ -13,7 +13,7 @@
   --close-btn-visibility: visible;
 
   /* Hanukia variables */
-  --hanukia-scale: scale(1)
+  --hanukia-scale: scale(0.9)
   
 }
 
